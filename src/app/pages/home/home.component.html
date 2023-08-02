@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="slidser-block">
+        <div class="wrapper">
+            <div class="slider-line" [style.left]="count">
+                <div class="block-01">
+                    <a [routerLink]="[ 'shareds' ]"><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/5-tyj-v-podarunok-.jpg"
+                            alt=""></a>
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/rol-tyzhnya.jpg"
+                            alt=""></a>
+                </div>
+                <div class="block-02">
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/den-narodzhennya-.jpg"
+                            alt=""></a>
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/monokombo.jpg" alt=""></a>
+                </div>
+                <div class="block-03">
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/samovyviz.jpg"
+                            alt=""></a>
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/fotomarafon-.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-slider-block">
+        <button 
+        (click)="statsPosition()" 
+        [style.background]="count == '0' ? '#6c9eca' : '#b5d8f7'"
+        ></button>
+        <button 
+        (click)="changeOne()"
+         [style.background]="count == '-50%' ? '#6c9eca' : '#b5d8f7'"
+         ></button>
+        <button (click)="changeTwo()"
+         [style.background]="count == '-100%' ? '#6c9eca' : '#b5d8f7'"
+         ></button>
+        <button (click)="changeThree()"
+         [style.background]="count == '-150%' ? '#6c9eca' : '#b5d8f7'"
+         ></button>
+        <button (click)="changeFour()"
+         [style.background]="count == '-200%' ? '#6c9eca' : '#b5d8f7'"
+         ></button>
+    </div>
+    <div class="line-inform">
+        <div class="line-inform__block-01">
+            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/mn-delivery-img.svg" alt="">
+            <h2 [routerLink]="[ 'delivery' ]" routerLinkActive="home-delivery">Зона доставки</h2>
+        </div>
+        <div class="line-inform__block-02">
+            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/mono-supermen.svg" alt="">
+            <p>
+                <span>Cередній час доставки в</span>
+                <span>зеленій зоні <b>00:43:00</b></span>
+            </p>
+        </div>
+        <div class="line-inform__block-03">
+            <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/mono-bonus.svg" alt="">
+            <p>
+                <span>Наш графік роботи</span>
+                <span>Працюємо з <b>11:00</b> до <b>22:30</b></span>
+            </p>
+        </div>
+    </div>
+</div>

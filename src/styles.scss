@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../src/app/options/styles/_variables';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: $text-color;
+}

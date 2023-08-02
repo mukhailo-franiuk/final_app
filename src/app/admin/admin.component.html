@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="navigation-block">
+        <ul>
+            
+            <li [routerLink]="[ 'shared' ]" routerLinkActive="active">Акції</li>
+            <li [routerLink]="[ 'category' ]" routerLinkActive="active">Категорії</li>
+            <li [routerLink]="[ 'products' ]" routerLinkActive="active">Товари</li>
+            <li [routerLink]="[ 'order' ]" routerLinkActive="active">Замовлення</li>
+        </ul>
+    </div>
+    <div class="option-admin">
+        <router-outlet ></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,147 @@
+@import '../../options/styles/_variables';
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width:1440px){
+        &__top-block{
+            width: 75%;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .line{
+                width: 12%;
+                height: 7px;
+                background-color: $color-primary;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            h2{
+                font-size: 45px;
+            }
+        }
+        &__block-02{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                font-size: 40px;
+                padding: 20px 0 30px 30px;
+                text-align: center;
+            }
+            p{
+                padding: 20px 0 30px 40px;
+                line-height: 30px;
+                font-size: 23px;
+            }
+            ul{
+                list-style-type:circle;
+                padding: 20px 0 30px 60px;
+                li{
+                    padding: 10px 0;
+                    font-size: 23px;
+                }
+            }
+        }
+        &__block-03{
+            width: 75%;
+            display: flex;
+            margin-top: 40px;
+            .sub-block-left{
+                width: 45%;
+                img{
+                    width: 100%;
+                }
+            }
+            .sub-block-right{
+                width: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    font-size: 40px;
+                    padding: 30px 0;
+                }
+                p{
+                    font-size: 23px;
+                    padding: 0 10%;
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        &__block-04{
+            width: 75%;
+            display: flex;
+            margin: 100px 0;
+            .sub-block-left{
+                width: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    font-size: 40px;
+                    padding: 30px 0;
+                }
+                p{
+                    font-size: 23px;
+                    padding-right: 20px;
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }
+            .sub-block-right{
+                width: 45%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        &__block-05{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            .top{
+                margin: 30px 0 50px 0;
+                h2{
+                    font-size: 45px;
+                }
+            }
+            .bottom {
+                display: flex;
+                section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .bg{
+                        width: 85px;
+                        height: 85px;
+                        background-color: $color-primary;
+                        border-radius:10px ;
+                    }
+                    h4{
+                        font-size: 25px;
+                        padding: 20px 0;
+                    }
+                    p{
+                        padding: 0 10%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

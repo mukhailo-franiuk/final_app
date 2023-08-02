@@ -1,0 +1,25 @@
+app/
+    static/
+        header.component
+        footer.component
+    pages/
+        home.component
+        shared.component
+        rols.component
+        sets.component
+        drinks.component
+        sauce.component
+        delivery.component
+        about.component
+    admin/
+        admin.component/
+            admin.shared.component
+            admin.category.component
+            admin.products.component
+            admin.order.component
+    options/
+        services/
+        pipe/
+        styles/
+            _variable.scss
+        

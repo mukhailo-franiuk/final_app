@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="button-block">
+        <button type="button" (click)="showMenu($event)" name="">добавати акцію</button>
+    </div>
+    <div class="options-shared" *ngIf="lockMenu">
+        <form action="" [formGroup]="sharedForm" (ngSubmit)="addCategory()">
+            <div class="one-block">
+                <input type="text" placeholder="*Назва" formControlName="name" required="">
+                <input type="text" placeholder="*Заголовок" formControlName="title">
+            </div>
+            <div class="two-block">
+                <textarea name="" id="" cols="30" rows="10" placeholder="*Опис" formControlName="description">
+
+                </textarea>
+            </div>
+            <div class="three-block">
+                <input type="file" class="file" (change)="upload($event)">
+            </div>
+            <div class="line-block">
+                <div class="line" [style.background]="'red'" [style.width.%] = "progresPercent"></div>
+            </div>
+            <ng-container *ngIf="statusLoad">
+                <div class="image-load">
+                    <img [src]="valueByControl('imagePath')" alt="alt">
+                </div>
+                <div class="del-img">
+                   <button (click)="deletedImage()" type="button">видалити картинку</button>
+                </div>
+            </ng-container>
+            <div class="save-edit">
+                <button [disabled]="sharedForm.invalid" type="submit">{{ editStatus ? 'Зберегти' : 'Добавити' }}</button>
+            </div>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Дата</b></td>
+                <td><b>Назва</b></td>
+                <td><b>Заголовок</b></td>
+                <td><b>Опис</b></td>
+                <td><b>Картинка</b></td>
+                <td><b>Дії</b></td>
+            </tr>
+        </thead>
+        <tbody *ngFor="let shared of adminShared">
+            <tr>
+                <td></td>
+                <td>{{ shared.name }}</td>
+                <td>{{ shared.title }}</td>
+                <td>{{ shared.description | slice:0:20 }}</td>
+                <td> 
+                    <img [src]="shared.imagePath" alt="" width="60px" height="45px">
+                </td>
+                <td>
+                    <ul>
+                        <li (click)="editShared(shared)">Редагувати</li>
+                        <li (click)="deleteShared(shared)">Видалити</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

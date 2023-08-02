@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="button-block">
+        <button type="button" (click)="showMenu($event)" name="">добавати акцію</button>
+    </div>
+    <div class="options-shared" *ngIf="lockMenu">
+        <form action="" [formGroup]="categoryForm" (ngSubmit)="addCategory()">
+            <div class="one-block">
+                <input type="text" placeholder="*Назва" formControlName="name" required="">
+                <input type="text" placeholder="*Заголовок" formControlName="path">
+            </div>
+            <div class="three-block">
+                <input type="file" class="file" (change)="upload($event)">
+            </div>
+            <div class="line-block">
+                <div class="line" [style.background]="'red'" [style.width.%] = "progressPercent"></div>
+            </div>
+            <ng-container *ngIf="statusLoad">
+                <div class="image-load">
+                    <img [src]="valueByControl('imagePath')" alt="alt">
+                </div>
+                <div class="del-img">
+                   <button (click)="deletedImage()" type="button">видалити картинку</button>
+                </div>
+            </ng-container>
+            <div class="save-edit">
+                <button [disabled]="categoryForm.invalid" type="submit">{{ editStatus ? 'Зберегти' : 'Добавити' }}</button>
+            </div>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Номер</b></td>
+                <td><b>Шлях</b></td>
+                <td><b>Картинка</b></td>
+                <td><b>Дії</b></td>
+            </tr>
+        </thead>
+        <tbody *ngFor="let category of allCategories">
+            <tr>
+                <td>{{ category.name }}</td>
+                <td>{{ category.path }}</td>
+                <td> 
+                    <img [src]="category.imagePath" alt="" width="60px" height="45px">
+                </td>
+                <td>
+                    <ul>
+                        <li (click)="editCategories(category)">Редагувати</li>
+                        <li (click)="deleteCategories(category)">Видалити</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

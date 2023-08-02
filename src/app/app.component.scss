@@ -1,0 +1,11 @@
+@import '../app/options/styles/_variables';
+.container{
+    width: 100%;
+    header {
+        height: 110px;
+    }
+    footer {
+      margin-top: 20px;
+      border-top: 4px solid $color-primary;
+    }
+}

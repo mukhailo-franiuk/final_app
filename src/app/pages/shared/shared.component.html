@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="block" *ngFor="let shared of sharedAll">
+        <img [src]="shared.imagePath" alt="">
+        <h2>{{ shared.title }}</h2>
+        <button>детальніше</button>
+    </div>
+</div>
