@@ -1,4 +1,30 @@
 {
   "shared": [],
-  "categories": []
+  "categories": [
+    {
+      "name": "роли",
+      "path": "rolls",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-770e6.appspot.com/o/images%2Fnav-img-rolls.svg?alt=media&token=87b503f1-76ba-427b-b444-b59604179333",
+      "id": 1
+    },
+    {
+      "name": "сети",
+      "path": "sets",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-770e6.appspot.com/o/images%2Fnav-img-sets.svg?alt=media&token=6cb95594-5aa5-4b90-8643-bc07e4f51241",
+      "id": 2
+    },
+    {
+      "name": "напої",
+      "path": "drinks",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-770e6.appspot.com/o/images%2Fnav-img-drinks.svg?alt=media&token=58a41b72-09cd-43d8-a56f-477de7d72e4a",
+      "id": 3
+    },
+    {
+      "name": "соуси",
+      "path": "sauce",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-770e6.appspot.com/o/images%2Ficon-souce.svg?alt=media&token=cd48ba71-6e61-43ce-9b8e-e07970e8080b",
+      "id": 4
+    }
+  ],
+  "product": []
 }

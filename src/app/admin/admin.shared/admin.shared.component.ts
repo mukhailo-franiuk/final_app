@@ -16,8 +16,10 @@ export class AdminSharedComponent {
   public editStatus = false;
   public sharedId = 0;
   public isUploaded = false;
+  public dateCreateShared!: string;
   public adminShared: Array<SharedResponse> = [];
-
+  public date!: string;
+  public urlMy!:string
 
   public sharedForm!: FormGroup;
   public progresPercent!: number;
@@ -36,14 +38,14 @@ export class AdminSharedComponent {
 
   initFormShared(): void {
     this.sharedForm = this.formBuild.group({
+      date: new Date(),
       name: [null, Validators.required],
       title: [null, Validators.required],
       description: [null, Validators.required],
-      imagePath: ['', Validators.required],
-      date: [null]
+      imagePath: ['', Validators.required]
     })
   }
-  showMenu(e: any): void { 
+  showMenu(e: any): void {
     if (e.target.name === 'active') {
       this.lockMenu = false;
       this.statusLoad = true;
@@ -70,6 +72,8 @@ export class AdminSharedComponent {
     } else {
       this.sharedServices.create(this.sharedForm.value).subscribe(() => {
         this.getAll();
+        console.log(this.urlMy);
+        
       })
     }
     this.lockMenu = false;
@@ -122,6 +126,7 @@ export class AdminSharedComponent {
         });
         await task;
         url = await getDownloadURL(providerRef);
+        this.urlMy = url;
       }
       catch (error: any) {
         console.error(error);
@@ -141,7 +146,7 @@ export class AdminSharedComponent {
         console.log('file deleted');
         this.progresPercent = 0;
         this.sharedForm.patchValue({
-          imagePath : ''
+          imagePath: ''
         })
         this.statusLoad = false;
       })

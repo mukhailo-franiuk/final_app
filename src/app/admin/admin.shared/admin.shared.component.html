@@ -45,7 +45,7 @@
         </thead>
         <tbody *ngFor="let shared of adminShared">
             <tr>
-                <td></td>
+                <td>{{ shared.date | date:'short'}}</td>
                 <td>{{ shared.name }}</td>
                 <td>{{ shared.title }}</td>
                 <td>{{ shared.description | slice:0:20 }}</td>

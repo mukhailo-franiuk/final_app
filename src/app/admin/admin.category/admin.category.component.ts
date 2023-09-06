@@ -19,6 +19,7 @@ export class AdminCategoryComponent {
   public progressPercent = 0;
 
 
+
   public categoryForm!: FormGroup
   constructor(
     private formBuild:FormBuilder,
@@ -51,7 +52,6 @@ export class AdminCategoryComponent {
   getAllCategories():void{
     this.categoryService.getAll().subscribe( data => {
       this.allCategories = data;
-      console.log(this.allCategories);
       
     })
   }

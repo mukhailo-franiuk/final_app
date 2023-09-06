@@ -19,7 +19,9 @@ export class SharedService {
   getAll(): Observable<SharedResponse[]> {
     return this.http.get<SharedResponse[]>(this.apiGo.shared);
   }
-
+  getOne(id: number): Observable<SharedResponse> {
+    return this.http.get<SharedResponse>(`${this.apiGo.shared}/${id}`);
+  }
   create(shared: SharedRequest): Observable<SharedResponse> {
     return this.http.post<SharedResponse>(this.apiGo.shared, shared);
   }

@@ -1,29 +1,32 @@
 <div class="container">
     <nav>
         <ul>
-        
-            <li class="logo"><a [routerLink]="[ '/' ]" routerLinkActive="active" (click)="closeMenuModal()"><img src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg"
-                        alt=""></a></li>
-            <li class="shared active"><a [routerLink]="[ 'shareds' ]" routerLinkActive="active" (click)="closeMenuModal()">
-                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-gift.svg" alt="">
-                    <span>Акції</span>
-                </a></li>
-            <li class="rols"><a [routerLink]="[ 'rols' ]" routerLinkActive="active" (click)="closeMenuModal()">
-                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-rolls.svg" alt="">
-                    <span>Роли</span>
-                </a></li>
-            <li class="sets"><a [routerLink]="[ 'sets' ]" routerLinkActive="active" (click)="closeMenuModal()">
-                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-sets.svg" alt="">
-                    <span>Сети</span>
-                </a></li>
-            <li class="drinks"><a [routerLink]="[ 'drinks' ]"  routerLinkActive="active" (click)="closeMenuModal()">
-                    <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-drinks.svg" alt="">
-                    <span>Напої</span>
-                </a></li>
-            <li class="sauce"><a [routerLink]="[ 'sauces' ]"  routerLinkActive="active" (click)="closeMenuModal()">
-                    <img src="https://monosushi.com.ua/wp-content/uploads/2021/09/icon.svg" alt="">
-                    <span>Соуси</span>
-                </a></li>
+
+            <li class="logo"><a [routerLink]="[ '/' ]" routerLinkActive="active" (click)="closeMenuModal()"><img
+                        src="https://monosushi.com.ua/wp-content/uploads/2021/06/logo.svg" alt=""></a></li>
+            <div class="mobile-style">
+                <li class="shared"><a [routerLink]="[ 'shareds' ]" routerLinkActive="active"
+                        (click)="closeMenuModal()">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-gift.svg" alt="">
+                        <span>Акції</span>
+                    </a></li>
+                <li class="rols"><a [routerLink]="[ 'rols' ]" routerLinkActive="active" (click)="closeMenuModal()">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-rolls.svg" alt="">
+                        <span>Роли</span>
+                    </a></li>
+                <li class="sets"><a [routerLink]="[ 'sets' ]" routerLinkActive="active" (click)="closeMenuModal()">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-sets.svg" alt="">
+                        <span>Сети</span>
+                    </a></li>
+                <li class="drinks"><a [routerLink]="[ 'drinks' ]" routerLinkActive="active" (click)="closeMenuModal()">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2020/10/nav-img-drinks.svg" alt="">
+                        <span>Напої</span>
+                    </a></li>
+                <li class="sauce"><a [routerLink]="[ 'sauces' ]" routerLinkActive="active" (click)="closeMenuModal()">
+                        <img src="https://monosushi.com.ua/wp-content/uploads/2021/09/icon.svg" alt="">
+                        <span>Соуси</span>
+                    </a></li>
+            </div>
             <li class="sub-menu">
                 <div class="sub-btn" (click)="showMenuModal()" title="show menu">
                     <span class="line-01"></span>
@@ -36,8 +39,10 @@
                         <span class="line-close-02"></span>
                     </button>
                     <ul>
-                        <li><a [routerLink]="[ 'delivery' ]" routerLinkActive="active" (click)="closeMenuModal()">Доставка та оплата</a></li>
-                        <li><a [routerLink]="[ 'about' ]" routerLinkActive="active" (click)="closeMenuModal()">Про нас</a></li>
+                        <li><a [routerLink]="[ 'delivery' ]" routerLinkActive="active"
+                                (click)="closeMenuModal()">Доставка та оплата</a></li>
+                        <li><a [routerLink]="[ 'about' ]" routerLinkActive="active" (click)="closeMenuModal()">Про
+                                нас</a></li>
                     </ul>
                 </div>
             </li>
@@ -55,9 +60,24 @@
             </li>
             <li class="admin-panel">
                 <button class="admin-creator" type="submit">
-                     
-                    <a [routerLink]="[ '/admin' ]" routerLinkActive="active"><img src="https://monosushi.com.ua/wp-content/themes/monosushi/img/user.svg" alt="" (click)="closeMenuModal()"></a>
+                    <a [routerLink]="[ '/admin' ]" routerLinkActive="active" (click)="openEnterStatus"><img
+                            src="https://monosushi.com.ua/wp-content/themes/monosushi/img/user.svg" alt=""
+                            (click)="closeMenuModal()"></a>
                 </button>
+                <div class="modal-user-enter" *ngIf="enterStatus">
+                    <form action="">
+                        <h2>Вхід в панель</h2>
+                        <label for="login-enter"> Логін : <br>
+                            <input type="text" name="" id="login-enter">
+                        </label>
+                        <label for="password-enter"> Логін :<br>
+                            <input type="password" name="" id="password-enter">
+                        </label>
+                        <br>
+                        <button type="button">вхід</button>
+                        <h4>close</h4>
+                    </form>
+                </div>
             </li>
             <li class="basket">
                 <div class="basket__block">

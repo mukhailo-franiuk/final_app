@@ -7,14 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public showModalMenu = false;
-constructor(){}
-ngOnInit(): void {
- 
-}
-showMenuModal():void {
-this.showModalMenu = true;
-}
-closeMenuModal():void {
-  this.showModalMenu = false;
-}
+  public enterStatus = false;
+  constructor() { }
+  ngOnInit(): void {
+
+  }
+  showMenuModal(): void {
+    this.showModalMenu = true;
+  }
+  closeMenuModal(): void {
+    this.showModalMenu = false;
+  }
+  openEnterStatus():void {
+    this.enterStatus = true;
+  }
 }

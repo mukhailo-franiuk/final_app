@@ -1,1 +1,85 @@
-<p>admin.products works!</p>
+<div class="container">
+    <div class="button-block">
+        <button type="button" (click)="showMenu($event)" name="">добавати товар</button>
+    </div>
+    <div class="options-product" *ngIf="lockMenu">
+        <form action="" [formGroup]="productForm" (ngSubmit)="addCategory()" class="form-product">
+            <div class="one-block">
+                <label for="category-choice">Виберіть категорію : <br>
+                    <select name="" id="" formControlName="category">
+                        <option [ngValue]="category" *ngFor="let category of adminCategories">{{ category.name }}
+                        </option>
+                    </select>
+                </label>
+            </div>
+            <div class="two-block">
+                <div>
+                    <label for="name">Назва : <br>
+                        <input type="text" name="" id="name" formControlName="name">
+                    </label>
+                </div>
+                <div>
+                    <label for="path">Шлях : <br>
+                        <input type="text" name="" id="path" formControlName="path">
+                    </label>
+                </div>
+            </div>
+
+            <div class="three-block">
+                <div>
+                    <label for="weight">Вага : <br>
+                        <input type="number" name="" id="weight" formControlName="weight">
+                    </label>
+                </div>
+                <div>
+                    <label for="price">Ціна : <br>
+                        <input type="number" name="" id="price" formControlName="price">
+                    </label>
+                </div>
+            </div>
+            <div class="four-block">
+                <label for="components">
+                    <textarea name="" id="components" cols="30" rows="10" formControlName="ingredients"></textarea>
+                </label>
+            </div>
+            <div class="five-block">
+                <input type="file" class="file" (change)="upload($event)">
+            </div>
+            <button [disabled]="productForm.invalid" type="submit">
+                {{ editStatus ? 'Save' : 'Add' }}
+            </button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Номер</b></td>
+                <td><b>Назва</b></td>
+                <td><b>Шлях</b></td>
+                <td><b>Вага</b></td>
+                <td><b>Ціна</b></td>
+                <td><b>Картинка</b></td>
+                <td><b>Дії</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of adminProducts">
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.ingredients }}</td>
+                <td>{{ product.price }} г.</td>
+                <td>{{ product.weight }} грн.</td>
+                <td><img [src]="product.imagePath" alt=""></td>
+                <td>
+                    <p>
+                        <button (click)="editProduct(product)">edit</button>
+                    </p>
+                    <p>
+                        <button (click)="deleteProduct(product)">del</button>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -3,8 +3,8 @@
         <div class="wrapper">
             <div class="slider-line" [style.left]="count">
                 <div class="block-01">
-                    <a [routerLink]="[ 'shareds' ]"><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/5-tyj-v-podarunok-.jpg"
-                            alt=""></a>
+                    <a [routerLink]="[ 'shareds' ]"><img
+                            src="https://monosushi.com.ua/wp-content/uploads/2022/12/5-tyj-v-podarunok-.jpg" alt=""></a>
                     <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/rol-tyzhnya.jpg"
                             alt=""></a>
                 </div>
@@ -14,31 +14,19 @@
                     <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/monokombo.jpg" alt=""></a>
                 </div>
                 <div class="block-03">
-                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/samovyviz.jpg"
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/samovyviz.jpg" alt=""></a>
+                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/fotomarafon-.jpg"
                             alt=""></a>
-                    <a href=""><img src="https://monosushi.com.ua/wp-content/uploads/2022/12/fotomarafon-.jpg" alt=""></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="navigation-slider-block">
-        <button 
-        (click)="statsPosition()" 
-        [style.background]="count == '0' ? '#6c9eca' : '#b5d8f7'"
-        ></button>
-        <button 
-        (click)="changeOne()"
-         [style.background]="count == '-50%' ? '#6c9eca' : '#b5d8f7'"
-         ></button>
-        <button (click)="changeTwo()"
-         [style.background]="count == '-100%' ? '#6c9eca' : '#b5d8f7'"
-         ></button>
-        <button (click)="changeThree()"
-         [style.background]="count == '-150%' ? '#6c9eca' : '#b5d8f7'"
-         ></button>
-        <button (click)="changeFour()"
-         [style.background]="count == '-200%' ? '#6c9eca' : '#b5d8f7'"
-         ></button>
+        <button (click)="statsPosition()" [style.background]="count == '0' ? '#6c9eca' : '#b5d8f7'"></button>
+        <button (click)="changeOne()" [style.background]="count == '-50%' ? '#6c9eca' : '#b5d8f7'"></button>
+        <button (click)="changeTwo()" [style.background]="count == '-100%' ? '#6c9eca' : '#b5d8f7'"></button>
+        <button (click)="changeThree()" [style.background]="count == '-150%' ? '#6c9eca' : '#b5d8f7'"></button>
+        <button (click)="changeFour()" [style.background]="count == '-200%' ? '#6c9eca' : '#b5d8f7'"></button>
     </div>
     <div class="line-inform">
         <div class="line-inform__block-01">
@@ -58,6 +46,57 @@
                 <span>Наш графік роботи</span>
                 <span>Працюємо з <b>11:00</b> до <b>22:30</b></span>
             </p>
+        </div>
+    </div>
+    <div class="products-block">
+        <div class="top-nav-products">
+            <div class="nav" (click)="allProducts()" [style]="style1">
+                <h2>Всі</h2>
+            </div>
+            <div class="nav" (click)="oneBlock()" [style]="style2">
+                <h2>Роли Філадельфія</h2>
+            </div>
+            <div class="nav" (click)="twoBlock()" [style]="style3">
+                <h2>
+                    Роли Каліфорнія
+                </h2>
+            </div>
+            <div class="nav" (click)="threeBlock()" [style]="style4">
+                <h2>
+                    Запечені роли
+                </h2>
+            </div>
+            <div class="nav" (click)="fourBlock()" [style]="style5">
+                <h2>
+                    Фірмові Суші
+                </h2>
+            </div>
+            <div class="nav" (click)="fiveBlock()" [style]="style6">
+                <h2>
+                    Роли Макі
+                </h2>
+            </div>
+            <div class="nav" (click)="sixBlock()" [style]="style7">
+                <h2>
+                    Преміум Суші
+                </h2>
+            </div>
+        </div>
+        <div class="allProd">
+        <div class="list-products" *ngFor="let products of adminProducts">
+            <div class="img-block">
+                <img [src]="products.imagePath" alt="">
+            </div>
+            <div class="message-block">
+                <h2>{{ products.name }}</h2>
+            </div>
+            <div class="ingredients-block">
+                <span>{{ products.ingredients }}</span><span [style]="'font-weight: bold;'">{{ products.weight }} г.</span>
+            </div>
+            <div class="price-nav-block">
+                <span [style]="'font-weight: bold;'">{{ products.price }} грн.</span> <span><button>Замовити</button></span>
+            </div>
+        </div>
         </div>
     </div>
 </div>

@@ -11,6 +11,7 @@ import { SauceComponent } from './pages/sauce/sauce.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { AboutComponent } from './pages/about/about.component';
 import { OfertaComponent } from './pages/oferta/oferta.component';
+import { SharedInfoComponent } from './pages/shared-info/shared-info.component';
 
 import { AdminComponent } from './admin/admin.component';
 import { AdminSharedComponent } from './admin/admin.shared/admin.shared.component';
@@ -21,6 +22,7 @@ import { AdminOrderComponent } from './admin/admin.order/admin.order.component';
 const routes: Routes = [
   {path:'',component:HomeComponent,title:'Monosushi'},
   {path:'shareds',component:SharedComponent,title:'Акції - Monosushi'},
+  {path:'shared/:id',component:SharedInfoComponent},
   {path:'rols',component:RoliComponent,title:'Роли - Monosushi'},
   {path:'sets',component:SetsComponent,title:'Сети - Monosushi'},
   {path:'drinks',component:DrinksComponent,title:'Напої - Monosushi'},

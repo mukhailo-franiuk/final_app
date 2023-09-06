@@ -1,6 +1,6 @@
 <div class="container">
     <div class="button-block">
-        <button type="button" (click)="showMenu($event)" name="">добавати акцію</button>
+        <button type="button" (click)="showMenu($event)" name="">добавати категорію</button>
     </div>
     <div class="options-shared" *ngIf="lockMenu">
         <form action="" [formGroup]="categoryForm" (ngSubmit)="addCategory()">
@@ -31,6 +31,7 @@
         <thead>
             <tr>
                 <td><b>Номер</b></td>
+                <td><b>Назва</b></td>
                 <td><b>Шлях</b></td>
                 <td><b>Картинка</b></td>
                 <td><b>Дії</b></td>
@@ -38,6 +39,7 @@
         </thead>
         <tbody *ngFor="let category of allCategories">
             <tr>
+                <td>N {{ category.id }} </td>
                 <td>{{ category.name }}</td>
                 <td>{{ category.path }}</td>
                 <td> 

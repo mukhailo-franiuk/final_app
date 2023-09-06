@@ -15,6 +15,7 @@ import { DrinksComponent } from './pages/drinks/drinks.component';
 import { SauceComponent } from './pages/sauce/sauce.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { AboutComponent } from './pages/about/about.component';
+import { SharedInfoComponent } from './pages/shared-info/shared-info.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdminSharedComponent } from './admin/admin.shared/admin.shared.component';
 import { AdminCategoryComponent } from './admin/admin.category/admin.category.component';
@@ -44,7 +45,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     AdminCategoryComponent,
     AdminProductsComponent,
     AdminOrderComponent,
-    OfertaComponent
+    OfertaComponent,
+    SharedInfoComponent
   ],
   imports: [
     BrowserModule,

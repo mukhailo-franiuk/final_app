@@ -1,0 +1,170 @@
+@import '../../options/styles/_variables';
+
+.container {
+    width: 100%;
+
+    .button-block {
+        width: 90%;
+        margin: 0 auto;
+
+        button {
+            width: 30%;
+            margin: 40px 0;
+            padding: 30px 0;
+            text-transform: uppercase;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 10px;
+            border: 3px solid $color-primary;
+            font-size: 35px;
+            font-weight: bold;
+            transition: all .4s ease;
+
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    .options-product {
+        width: 90%;
+        margin: 0 auto;
+
+        .form-product {
+            width: 100%;
+
+            .one-block {
+                width: 100%;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                label {
+
+                    font-size: 18px;
+
+                    select {
+                        display: block;
+                        width: 300px;
+                        height: 30px;
+                        border: 2px solid $color-primary;
+                        border-radius: 10px;
+
+                        option {
+                            margin: 5px 0;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            .two-block,
+            .three-block {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: 2px solid $color-primary;
+                margin: 20px 0;
+
+                div {
+                    width: 45%;
+                    margin: 30px 0;
+
+                    label {
+                        width: 100%;
+                        color: $text-color;
+                        font-family: sans-serif;
+                        font-size: 19px;
+                        margin-right: 10px;
+
+                        input {
+                            width: 100%;
+                            min-height: 30px;
+                            font-size: 16px;
+                            padding: 5px 10px;
+                            border-radius: 10px;
+                            border: 2px solid $color-primary;
+                            outline: none;
+                            color: $text-color;
+                        }
+                    }
+                }
+            }
+
+            .four-block {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border: 2px solid $color-primary;
+
+                label {
+                    width: 100%;
+                }
+
+                #components {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    padding: 5px 10px;
+                }
+            }
+
+            .five-block {
+                width: 100%;
+                margin: 20px 0;
+                padding: 10px;
+                border: 2px solid $color-primary;
+            }
+
+            button {
+                width: 30%;
+                margin: 40px 0;
+                padding: 10px 0;
+                text-transform: uppercase;
+                cursor: pointer;
+                background-color: transparent;
+                border-radius: 10px;
+                border: 3px solid $color-primary;
+                font-size: 25px;
+                font-weight: bold;
+                transition: all .4s ease;
+
+                &:hover {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    table {
+        width: 90%;
+        margin: 0 auto;
+        thead{
+            tr{
+                td{
+                    text-align: center;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    width: 15%;
+                    text-align: center;
+                    img{
+                        width: 80px;
+                        height: 60px;
+                    }
+                    button{
+                        padding: 5px 10px;
+                        margin: 10px 0;
+                        cursor:pointer;
+                    }
+                }
+            }
+        }
+    }
+}

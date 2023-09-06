@@ -1,7 +1,12 @@
 <div class="container">
-    <div class="block" *ngFor="let shared of sharedAll">
-        <img [src]="shared.imagePath" alt="">
-        <h2>{{ shared.title }}</h2>
-        <button>детальніше</button>
+    <div class="shar" *ngIf="showMessageError">
+        <div class="block" *ngFor="let shared of sharedAll">
+            <img [src]="shared.imagePath" alt="image not found">
+            <h2>{{ shared.title }}</h2>
+            <button [routerLink]="[ '/shared', shared.id]">детальніше</button>
+        </div>
+    </div>
+    <div class="error-mess" *ngIf="!showMessageError">
+        <h2>Список акцій порожній</h2>
     </div>
 </div>

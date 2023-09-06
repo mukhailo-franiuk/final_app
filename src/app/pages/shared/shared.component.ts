@@ -8,7 +8,8 @@ import { SharedService } from 'src/app/options/services/shared/shared.service';
   styleUrls: ['./shared.component.scss']
 })
 export class SharedComponent {
-public sharedAll:Array<SharedResponse > = []
+public sharedAll:Array<SharedResponse > = [];
+public showMessageError = true;
 
 constructor(private servicesShared:SharedService){}
 
@@ -18,6 +19,12 @@ ngOnInit(): void {
 showService():void{
   this.servicesShared.getAll().subscribe(data => {
     this.sharedAll = data;
+    if(this.sharedAll.length === 0){
+      this.showMessageError = false;
+    }else {
+      this.showMessageError = true;
+    }
   })
 }
+
 }

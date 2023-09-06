@@ -13,8 +13,25 @@ export interface SharedResponse extends SharedRequest{
 export interface CategoryRequest {
     name : string,
     path : string,
-    imagePath : string
+    imagePath : string,
+    date : string
 }
 export interface CategoryResponce extends CategoryRequest {
 id : number
+}
+
+// =====================================================
+
+export interface ProductRequest {
+    category: CategoryResponce;
+    name: string;
+    path: string;
+    ingredients: string;
+    weight: string;
+    price: string;
+    imagePath: string;
+}
+
+export interface ProductResponse extends ProductRequest {
+    id: number;
 }
